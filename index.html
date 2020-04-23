@@ -10,6 +10,7 @@
     <style>
       body {
         background-color: black;
+        color: white;
       }
 
       header {
@@ -19,7 +20,7 @@
   </head>
 
   <body>
-    <header class="d-flex justify-content-between align-items-center">
+    <header class="d-flex justify-content-between align-items-center mx-4">
       <div class="logo">
         <img src="images/odds-read-logo.png" width="100px" />
       </div>
@@ -32,19 +33,82 @@
           <img src="images/cloud.png" width="50px" />
         </div>
         <div>
-          <img src="images/book.png" width="50px" />
+          <img src="images/book.png" width="40px" />
         </div>
         <div>
-          <img src="images/noti.png" width="50px" />
+          <img src="images/noti.png" width="40px" />
         </div>
         <div>
-          <img src="images/profile.png" width="50px" />
+          <img src="images/profile.png" width="40px" />
         </div>
       </div>
     </header>
 
     <content>
-      B
+      <!-- [START] Banner -->
+      <div class="banner d-flex">
+        <div class="intro">
+          <img src="images/odd-read-wording.png" width="200px" />
+          <p>
+            “Books are the quietest and most constant of friends;
+            they are the most accessible and wisest of counsellors,
+            and the most patient of teachers” by Charles William Eliot
+          </p>
+          <!-- Tag capsult -->
+          <select id="cars">
+            <option selected disabled>Genres</option>
+            <option value="Romance">Romance</option>
+            <option value="Science Fiction ">Science Fiction </option>
+          </select>
+        </div>
+
+        <div class="wormbook-image">
+          <img src="images/wormbook.png" />
+        </div>
+      </div>
+      <!-- [END] Banner -->
+
+      <!-- [START] Content -->
+      <div class="content d-flex flex-column align-items-center">
+        <div class="recommend-book d-flex col-10">
+          <div class="book-cover">
+            <img src="images/recommend-book-image.png" />
+          </div>
+          <div class="book-detail">
+            <h1>Animal Farm</h1>
+            <div class="author-and-tags">
+              <p>George Orwell</p>
+              <p>#political #satire</p>
+              <p>
+                หนังสือถูกแต่งโดย จอร์จ ออเวล (George Orwell,1905-1950) ที่สะท้อนคิดวัฒนธรรมการเมือง ในประเทศรัสเซีย ผ่านสถานการณ์บรรดาสัตว์ต่าง ๆ ที่ปรากฏใน Animal Farm ที่ต่อสู้ปฏิวัติกับคนที่เป็นเจ้าของฟาร์ม พร้อมนำไปสู่การปฏิวัติและพัฒนา แต่ทุกอย่างเกิดขึ้นภายใต้ “...การคอรัปชั่น เบี่ยงประเด็น พวกพ้อง ชนชั้น ผู้ปกครอง ผู้ถูกปกครอง ข่มขวัญ เสแสร้ง สร้างภาพ กดขี่ หลอกลวง ข่มขู่ หลอกใช้ เอารัดเอาเปรียบ ปั่นกระแส ปั้นเรื่อง แปลงสาร สาดโคลน ใส่ความ อุ้มฆ่า และตัดตอน ลับลวงพราง...” ซึ่งทั้งหมดเป็นเรื่องเล่าผ่านบรรดาสัตว์นานาชนิดใน Animal Farm
+              </p>
+              <div class="buttons">
+                <a href="" class="btn btn-primary">BORROW</a>
+                <a href="" class="btn btn-primary">+ LIST</a>
+
+                <a href="" class="btn btn-primary">X</a>
+                <a href="" class="btn btn-primary">X</a>
+                <a href="" class="btn btn-primary">X</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fiction-books">
+          <h2>Fiction</h2>
+
+          <div class="books d-felx">
+            <img src="images/book_1.png" />
+            <img src="images/book_1.png" />
+            <img src="images/book_1.png" />
+            <img src="images/book_1.png" />
+            <img src="images/book_1.png" />
+          </div>
+
+          <div>Read more >></div>
+        </div>
+      </div>
+      <!-- [END] Content -->
     </content>
 
     <footer>

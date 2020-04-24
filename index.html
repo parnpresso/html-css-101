@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <title>Apple</title>
+    <title>Wormbook</title>
     <meta name="description" content="Not banana!"></meta>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -15,6 +15,44 @@
 
       header {
         height: 100px;
+      }
+
+      .content .recommend-book .book-detail .title {
+        font-family: Helvetica, sans-serif;
+        font-weight: 700;
+      }
+
+      .content .recommend-book .book-detail .author-and-tags {
+        font-family: Helvetica, sans-serif;
+        font-weight: 400;
+        color: #999999;
+      }
+
+      .content .recommend-book .book-detail .author-and-tags .dot {
+        width: 10px;
+        height: 10px;
+        background-color: #8CD77E;
+        display: inline-block;
+        border-radius: 50%;
+      }
+
+      .content .recommend-book .book-detail .separator {
+        height: 2px;
+        background-color: #8CD77E;
+      }
+
+      .btn-custom-green {
+        background-color: #8CD77E;
+        border: none;
+        font-weight: 500;
+      }
+
+      .btn-custom-green:hover {
+        background-color: rgb(120, 174, 135);
+      }
+
+      .btn-custom-circle {
+        border-radius: 50%;
       }
     </style>
   </head>
@@ -71,26 +109,35 @@
       <!-- [START] Content -->
       <div class="content d-flex flex-column align-items-center">
         <div class="recommend-book d-flex col-10">
-          <div class="book-cover">
+          <!-- Separate image and frame -->
+          <div class="book-cover mr-5">
             <img src="images/recommend-book-image.png" />
           </div>
 
           <div class="book-detail">
-            <h1>Animal Farm</h1>
-            <div class="author-and-tags">
-              <p>George Orwell</p>
-              <p>#political #satire</p>
+            <h1 class="title">Animal Farm</h1>
+            <div class="author-and-tags d-flex">
+              <p class="mr-4">George Orwell</p>
+              <p><span class="dot"></span> #political #satire</p>
+            </div>
+
+            <div class="separator mb-4"></div>
+
+            <div class="description mb-4">
               <p>
                 หนังสือถูกแต่งโดย จอร์จ ออเวล (George Orwell,1905-1950) ที่สะท้อนคิดวัฒนธรรมการเมือง ในประเทศรัสเซีย ผ่านสถานการณ์บรรดาสัตว์ต่าง ๆ ที่ปรากฏใน Animal Farm ที่ต่อสู้ปฏิวัติกับคนที่เป็นเจ้าของฟาร์ม พร้อมนำไปสู่การปฏิวัติและพัฒนา แต่ทุกอย่างเกิดขึ้นภายใต้ “...การคอรัปชั่น เบี่ยงประเด็น พวกพ้อง ชนชั้น ผู้ปกครอง ผู้ถูกปกครอง ข่มขวัญ เสแสร้ง สร้างภาพ กดขี่ หลอกลวง ข่มขู่ หลอกใช้ เอารัดเอาเปรียบ ปั่นกระแส ปั้นเรื่อง แปลงสาร สาดโคลน ใส่ความ อุ้มฆ่า และตัดตอน ลับลวงพราง...” ซึ่งทั้งหมดเป็นเรื่องเล่าผ่านบรรดาสัตว์นานาชนิดใน Animal Farm
               </p>
-              <div class="buttons">
-                <a href="" class="btn btn-primary">BORROW</a>
-                <a href="" class="btn btn-primary">+ LIST</a>
+            </div>
 
-                <a href="" class="btn btn-primary">X</a>
-                <a href="" class="btn btn-primary">X</a>
-                <a href="" class="btn btn-primary">X</a>
-              </div>
+            <div class="buttons">
+              <a href="" class="btn btn-primary btn-custom-green">BORROW</a>
+              <a href="" class="btn btn-primary btn-custom-green mr-4">+ LIST</a>
+
+              <a href="" class="btn btn-primary btn-custom-green btn-custom-circle">
+                X
+              </a>
+              <a href="" class="btn btn-primary btn-custom-green btn-custom-circle">X</a>
+              <a href="" class="btn btn-primary btn-custom-green btn-custom-circle">X</a>
             </div>
           </div>
         </div>

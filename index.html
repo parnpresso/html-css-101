@@ -1,5 +1,3 @@
-<!-- https://www.apple.com/ -->
-
 <html>
   <head>
     <title>Wormbook</title>
@@ -9,12 +7,18 @@
 
     <style>
       body {
-        background-color: black;
+        background-color: #1B1B1B;
         color: white;
       }
 
       header {
         height: 100px;
+      }
+
+      .content .recommend-book .book-detail {
+        background-color: #1B1B1B;
+        box-shadow: 0px 2px 8px 4px black;
+        border-radius: 10px;
       }
 
       .content .recommend-book .book-detail .title {
@@ -41,6 +45,13 @@
         background-color: #8CD77E;
       }
 
+      .content .recommend-book .book-detail .description {
+        text-indent: 30px;
+        font-size: 17px;
+        /* font-family: Arial, Helvetica, sans-serif; */
+      }
+
+
       .btn-custom-green {
         background-color: #8CD77E;
         border: none;
@@ -53,6 +64,26 @@
 
       .btn-custom-circle {
         border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+        background-position: center;
+      }
+
+      .btn-clap {
+        background-image: url('images/clap-icon.png');
+      }
+
+      .btn-book {
+        background-image: url('images/book-icon.png');
+        background-size: 20px;
+      }
+
+      .btn-thumb-down {
+        background-image: url('images/thumb-down-icon.png');
+        background-color: black;
+        border: white 1px solid;
       }
     </style>
   </head>
@@ -92,7 +123,7 @@
             they are the most accessible and wisest of counsellors,
             and the most patient of teachers” by Charles William Eliot
           </p>
-          <!-- Tag capsult -->
+          <!-- Tag capsult? -->
           <select id="cars">
             <option selected disabled>Genres</option>
             <option value="Romance">Romance</option>
@@ -110,11 +141,11 @@
       <div class="content d-flex flex-column align-items-center">
         <div class="recommend-book d-flex col-10">
           <!-- Separate image and frame -->
-          <div class="book-cover mr-5">
+          <div class="book-cover mr-2">
             <img src="images/recommend-book-image.png" />
           </div>
 
-          <div class="book-detail">
+          <div class="book-detail p-5">
             <h1 class="title">Animal Farm</h1>
             <div class="author-and-tags d-flex">
               <p class="mr-4">George Orwell</p>
@@ -133,11 +164,9 @@
               <a href="" class="btn btn-primary btn-custom-green">BORROW</a>
               <a href="" class="btn btn-primary btn-custom-green mr-4">+ LIST</a>
 
-              <a href="" class="btn btn-primary btn-custom-green btn-custom-circle">
-                X
-              </a>
-              <a href="" class="btn btn-primary btn-custom-green btn-custom-circle">X</a>
-              <a href="" class="btn btn-primary btn-custom-green btn-custom-circle">X</a>
+              <a href="" class="btn btn-primary btn-custom-green btn-custom-circle btn-clap mr-1"></a>
+              <a href="" class="btn btn-primary btn-custom-green btn-custom-circle btn-book mr-1"></a>
+              <a href="" class="btn btn-primary btn-custom-green btn-custom-circle btn-thumb-down"></a>
             </div>
           </div>
         </div>
@@ -145,12 +174,12 @@
         <div class="fiction-books">
           <h2>Fiction</h2>
 
-          <div class="books d-felx">
+          <div class="books d-flex">
             <img src="images/book_1.png" />
-            <img src="images/book_1.png" />
-            <img src="images/book_1.png" />
-            <img src="images/book_1.png" />
-            <img src="images/book_1.png" />
+            <img src="images/book_2.png" />
+            <img src="images/book_3.png" />
+            <img src="images/book_4.png" />
+            <img src="images/book_5.png" />
           </div>
 
           <div>Read more >></div>

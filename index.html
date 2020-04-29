@@ -1,231 +1,283 @@
 <html>
-  <head>
+
+<head>
     <title>Wormbook</title>
     <meta name="description" content="Not banana!"></meta>
+    <meta charset="UTF-8">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <style>
-      body {
-        background-color: #1B1B1B;
-        color: white;
-        font-family: Helvetica, sans-serif;
-      }
+        body {
+            background-color: #1B1B1B;
+            color: white;
+            font-family: Helvetica, sans-serif;
+        }
 
-      header {
-        height: 100px;
-      }
+        header {
+            height: 100px;
+        }
 
-      .content .recommend-book .book-detail {
-        background-color: #1B1B1B;
-        box-shadow: 0px 2px 8px 4px black;
-        border-radius: 10px;
-      }
+        .content .recommend-book .book-detail {
+            background-color: #1B1B1B;
+            box-shadow: 0px 2px 8px 4px black;
+            border-radius: 10px;
+        }
 
-      .content .recommend-book .book-detail .title {
-        font-family: Helvetica, sans-serif;
-        font-weight: 700;
-      }
+        .content .recommend-book .book-detail .title {
+            font-family: Helvetica, sans-serif;
+            font-weight: 700;
+        }
 
-      .content .recommend-book .book-detail .author-and-tags {
-        font-family: Helvetica, sans-serif;
-        font-weight: 400;
-        color: #999999;
-      }
+        .content .recommend-book .book-detail .author-and-tags {
+            font-family: Helvetica, sans-serif;
+            font-weight: 400;
+            color: #999999;
+        }
 
-      .content .recommend-book .book-detail .author-and-tags .dot {
-        width: 10px;
-        height: 10px;
-        background-color: #8CD77E;
-        display: inline-block;
-        border-radius: 50%;
-      }
+        .content .recommend-book .book-detail .author-and-tags .dot {
+            width: 10px;
+            height: 10px;
+            background-color: #8CD77E;
+            display: inline-block;
+            border-radius: 50%;
+        }
 
-      .content .recommend-book .book-detail .separator {
-        height: 2px;
-        background-color: #8CD77E;
-      }
+        .content .recommend-book .book-detail .separator {
+            height: 2px;
+            background-color: #8CD77E;
+        }
 
-      .content .recommend-book .book-detail .description {
-        text-indent: 30px;
-        font-size: 17px;
-        /* font-family: Arial, Helvetica, sans-serif; */
-      }
+        .content .recommend-book .book-detail .description {
+            text-indent: 30px;
+            font-size: 17px;
+            /* font-family: Arial, Helvetica, sans-serif; */
+        }
 
+        .btn-custom-green {
+            background-color: #8CD77E;
+            border: none;
+            font-weight: 500;
+        }
 
-      .btn-custom-green {
-        background-color: #8CD77E;
-        border: none;
-        font-weight: 500;
-      }
+        .btn-custom-green:hover {
+            background-color: rgb(120, 174, 135);
+        }
 
-      .btn-custom-green:hover {
-        background-color: rgb(120, 174, 135);
-      }
+        .btn-custom-circle {
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
+            background-position: center;
+        }
 
-      .btn-custom-circle {
-        border-radius: 50%;
-        width: 36px;
-        height: 36px;
-        background-repeat: no-repeat;
-        background-size: 20px 20px;
-        background-position: center;
-      }
+        .btn-clap {
+            background-image: url('images/clap-icon.png');
+        }
 
-      .btn-clap {
-        background-image: url('images/clap-icon.png');
-      }
+        .btn-book {
+            background-image: url('images/book-icon.png');
+            background-size: 20px;
+        }
 
-      .btn-book {
-        background-image: url('images/book-icon.png');
-        background-size: 20px;
-      }
+        .btn-thumb-down {
+            background-image: url('images/thumb-down-icon.png');
+            background-color: black;
+            border: white 1px solid;
+        }
 
-      .btn-thumb-down {
-        background-image: url('images/thumb-down-icon.png');
-        background-color: black;
-        border: white 1px solid;
-      }
+        .btn-custom-black {
+            background-color: black;
+            border: white 1px solid;
+        }
+
+        .btn-custom-black:hover {
+            background-color: #8CD77E;
+        }
+
+        .btn-socialmedia {
+            width: 31px;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+
+        .page-footer .contact-btn {
+            margin-bottom: 1.5rem;
+        }
+
+        .page-footer .socialmedia,
+        .slogan {
+            margin-bottom: 2rem;
+        }
+
+        .slogan {
+            word-spacing: 1.75rem;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .slogan a {
+            color: #8CD77E;
+        }
+
+        .tab-footer {
+            width: 100%;
+            height: 36px;
+            background-color: #8CD77E;
+        }
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
     <header class="d-flex justify-content-between align-items-center mx-4">
-      <div class="logo">
-        <img src="images/odds-read-logo.png" width="100px" />
-      </div>
+        <div class="logo">
+            <img src="images/odds-read-logo.png" width="100px" />
+        </div>
 
-      <div class="menu d-flex">
-        <div>
-          <input placeholder="Search"/>
+        <div class="menu d-flex">
+            <div>
+                <input placeholder="Search" />
+            </div>
+            <div>
+                <img src="images/cloud.png" width="50px" />
+            </div>
+            <div>
+                <img src="images/book.png" width="40px" />
+            </div>
+            <div>
+                <img src="images/noti.png" width="40px" />
+            </div>
+            <div>
+                <img src="images/profile.png" width="40px" />
+            </div>
         </div>
-        <div>
-          <img src="images/cloud.png" width="50px" />
-        </div>
-        <div>
-          <img src="images/book.png" width="40px" />
-        </div>
-        <div>
-          <img src="images/noti.png" width="40px" />
-        </div>
-        <div>
-          <img src="images/profile.png" width="40px" />
-        </div>
-      </div>
     </header>
 
     <content>
-      <!-- [START] Banner -->
-      <div class="banner d-flex">
-        <div class="intro">
-          <img src="images/odd-read-wording.png" width="200px" />
-          <p>
-            “Books are the quietest and most constant of friends;
-            they are the most accessible and wisest of counsellors,
-            and the most patient of teachers” by Charles William Eliot
-          </p>
-          <!-- Tag capsult? -->
-          <select id="cars">
+        <!-- [START] Banner -->
+        <div class="banner d-flex">
+            <div class="intro">
+                <img src="images/odd-read-wording.png" width="200px" />
+                <p>
+                    “Books are the quietest and most constant of friends; they are the most accessible and wisest of counsellors, and the most patient of teachers” by Charles William Eliot
+                </p>
+                <!-- Tag capsult? -->
+                <select id="cars">
             <option selected disabled>Genres</option>
             <option value="Romance">Romance</option>
             <option value="Science Fiction ">Science Fiction </option>
           </select>
-        </div>
-
-        <div class="wormbook-image">
-          <img src="images/wormbook.png" />
-        </div>
-      </div>
-      <!-- [END] Banner -->
-
-      <!-- [START] Content -->
-      <div class="d-flex justify-content-center mb-2">
-        <div class="d-flex align-items-end col-10 col-md-10 col-xl-8">
-          <img class="mb-1 mr-2" src="images/crown-icon.png" width="40px"/>
-          <p class="m-0 font-weight-bold">Recommend</p>
-        </div>
-      </div>
-
-      <div class="content d-flex flex-column align-items-center">
-        <div class="recommend-book d-flex col-10 col-md-10 col-xl-8 mb-5">
-          <!-- Separate image and frame -->
-          <div class="book-cover mr-2">
-            <img src="images/recommend-book-image.png" />
-          </div>
-
-          <div class="book-detail p-5">
-            <h1 class="title">Animal Farm</h1>
-            <div class="author-and-tags d-flex">
-              <p class="mr-4">George Orwell</p>
-              <p><span class="dot"></span> #political #satire</p>
             </div>
 
-            <div class="separator mb-4"></div>
+            <div class="wormbook-image">
+                <img src="images/wormbook.png" />
+            </div>
+        </div>
+        <!-- [END] Banner -->
 
-            <div class="description mb-4">
-              <p>
-                หนังสือถูกแต่งโดย จอร์จ ออเวล (George Orwell,1905-1950) ที่สะท้อนคิดวัฒนธรรมการเมือง ในประเทศรัสเซีย ผ่านสถานการณ์บรรดาสัตว์ต่าง ๆ ที่ปรากฏใน Animal Farm ที่ต่อสู้ปฏิวัติกับคนที่เป็นเจ้าของฟาร์ม พร้อมนำไปสู่การปฏิวัติและพัฒนา แต่ทุกอย่างเกิดขึ้นภายใต้ “...การคอรัปชั่น เบี่ยงประเด็น พวกพ้อง ชนชั้น ผู้ปกครอง ผู้ถูกปกครอง ข่มขวัญ เสแสร้ง สร้างภาพ กดขี่ หลอกลวง ข่มขู่ หลอกใช้ เอารัดเอาเปรียบ ปั่นกระแส ปั้นเรื่อง แปลงสาร สาดโคลน ใส่ความ อุ้มฆ่า และตัดตอน ลับลวงพราง...” ซึ่งทั้งหมดเป็นเรื่องเล่าผ่านบรรดาสัตว์นานาชนิดใน Animal Farm
-              </p>
+        <!-- [START] Content -->
+        <div class="d-flex justify-content-center mb-2">
+            <div class="d-flex align-items-end col-10 col-md-10 col-xl-8">
+                <img class="mb-1 mr-2" src="images/crown-icon.png" width="40px" />
+                <p class="m-0 font-weight-bold">Recommend</p>
+            </div>
+        </div>
+
+        <div class="content d-flex flex-column align-items-center">
+            <div class="recommend-book d-flex col-10 col-md-10 col-xl-8 mb-5">
+                <!-- Separate image and frame -->
+                <div class="book-cover mr-2">
+                    <img src="images/recommend-book-image.png" />
+                </div>
+
+                <div class="book-detail p-5">
+                    <h1 class="title">Animal Farm</h1>
+                    <div class="author-and-tags d-flex">
+                        <p class="mr-4">George Orwell</p>
+                        <p><span class="dot"></span> #political #satire</p>
+                    </div>
+
+                    <div class="separator mb-4"></div>
+
+                    <div class="description mb-4">
+                        <p>
+                            หนังสือถูกแต่งโดย จอร์จ ออเวล (George Orwell,1905-1950) ที่สะท้อนคิดวัฒนธรรมการเมือง ในประเทศรัสเซีย ผ่านสถานการณ์บรรดาสัตว์ต่าง ๆ ที่ปรากฏใน Animal Farm ที่ต่อสู้ปฏิวัติกับคนที่เป็นเจ้าของฟาร์ม พร้อมนำไปสู่การปฏิวัติและพัฒนา แต่ทุกอย่างเกิดขึ้นภายใต้
+                            “...การคอรัปชั่น เบี่ยงประเด็น พวกพ้อง ชนชั้น ผู้ปกครอง ผู้ถูกปกครอง ข่มขวัญ เสแสร้ง สร้างภาพ กดขี่ หลอกลวง ข่มขู่ หลอกใช้ เอารัดเอาเปรียบ ปั่นกระแส ปั้นเรื่อง แปลงสาร สาดโคลน ใส่ความ อุ้มฆ่า และตัดตอน ลับลวงพราง...” ซึ่งทั้งหมดเป็นเรื่องเล่าผ่านบรรดาสัตว์นานาชนิดใน
+                            Animal Farm
+                        </p>
+                    </div>
+
+                    <div class="buttons">
+                        <a href="" class="btn btn-primary btn-custom-green">BORROW</a>
+                        <a href="" class="btn btn-primary btn-custom-black mr-4">+ LIST</a>
+
+                        <a href="" class="btn btn-primary btn-custom-green btn-custom-circle btn-clap mr-1"></a>
+                        <a href="" class="btn btn-primary btn-custom-green btn-custom-circle btn-book mr-1"></a>
+                        <a href="" class="btn btn-primary btn-custom-green btn-custom-circle btn-thumb-down"></a>
+                    </div>
+                </div>
             </div>
 
-            <div class="buttons">
-              <a href="" class="btn btn-primary btn-custom-green">BORROW</a>
-              <a href="" class="btn btn-primary btn-custom-green mr-4">+ LIST</a>
+            <div class="fiction-books col-10 col-md-10 col-xl-8">
+                <h4 class="font-weight-bold mb-3">Fiction</h4>
 
-              <a href="" class="btn btn-primary btn-custom-green btn-custom-circle btn-clap mr-1"></a>
-              <a href="" class="btn btn-primary btn-custom-green btn-custom-circle btn-book mr-1"></a>
-              <a href="" class="btn btn-primary btn-custom-green btn-custom-circle btn-thumb-down"></a>
+                <div class="books d-flex flex-wrap">
+                    <img class="mr-4 mb-4" src="images/book_1.png" />
+                    <img class="mr-4 mb-4" src="images/book_2.png" />
+                    <img class="mr-4 mb-4" src="images/book_3.png" />
+                    <img class="mr-4 mb-4" src="images/book_4.png" />
+                    <img class="mr-4 mb-4" src="images/book_5.png" />
+                </div>
+
+                <div class="d-flex justify-content-end">More >></div>
             </div>
-          </div>
+
+            <div class="fiction-books col-10">
+                <h4 class="font-weight-bold mb-3">Fiction</h4>
+
+                <div class="books d-flex flex-wrap">
+                    <img class="mr-4 mb-4" src="images/book_1.png" />
+                    <img class="mr-4 mb-4" src="images/book_2.png" />
+                    <img class="mr-4 mb-4" src="images/book_3.png" />
+                    <img class="mr-4 mb-4" src="images/book_4.png" />
+                    <img class="mr-4 mb-4" src="images/book_5.png" />
+                </div>
+
+                <div class="d-flex justify-content-end">More >></div>
+            </div>
+
+            <div class="fiction-books col-10">
+                <h4 class="font-weight-bold mb-3">Fiction</h4>
+
+                <div class="books d-flex flex-wrap">
+                    <img class="mr-4 mb-4" src="images/book_1.png" />
+                    <img class="mr-4 mb-4" src="images/book_2.png" />
+                    <img class="mr-4 mb-4" src="images/book_3.png" />
+                    <img class="mr-4 mb-4" src="images/book_4.png" />
+                    <img class="mr-4 mb-4" src="images/book_5.png" />
+                </div>
+
+                <div class="d-flex justify-content-end">More >></div>
+            </div>
         </div>
-
-        <div class="fiction-books col-10 col-md-10 col-xl-8">
-          <h4 class="font-weight-bold mb-3">Fiction</h4>
-
-          <div class="books d-flex flex-wrap">
-            <img class="mr-4 mb-4" src="images/book_1.png" />
-            <img class="mr-4 mb-4" src="images/book_2.png" />
-            <img class="mr-4 mb-4" src="images/book_3.png" />
-            <img class="mr-4 mb-4" src="images/book_4.png" />
-            <img class="mr-4 mb-4" src="images/book_5.png" />
-          </div>
-
-          <div class="d-flex justify-content-end">More >></div>
-        </div>
-
-        <div class="fiction-books col-10">
-          <h4 class="font-weight-bold mb-3">Fiction</h4>
-
-          <div class="books d-flex flex-wrap">
-            <img class="mr-4 mb-4" src="images/book_1.png" />
-            <img class="mr-4 mb-4" src="images/book_2.png" />
-            <img class="mr-4 mb-4" src="images/book_3.png" />
-            <img class="mr-4 mb-4" src="images/book_4.png" />
-            <img class="mr-4 mb-4" src="images/book_5.png" />
-          </div>
-
-          <div class="d-flex justify-content-end">More >></div>
-        </div>
-
-        <div class="fiction-books col-10">
-          <h4 class="font-weight-bold mb-3">Fiction</h4>
-
-          <div class="books d-flex flex-wrap">
-            <img class="mr-4 mb-4" src="images/book_1.png" />
-            <img class="mr-4 mb-4" src="images/book_2.png" />
-            <img class="mr-4 mb-4" src="images/book_3.png" />
-            <img class="mr-4 mb-4" src="images/book_4.png" />
-            <img class="mr-4 mb-4" src="images/book_5.png" />
-          </div>
-
-          <div class="d-flex justify-content-end">More >></div>
-        </div>
-      </div>
-      <!-- [END] Content -->
+        <!-- [END] Content -->
     </content>
 
-    <footer>
-      C
+    <footer class="page-footer d-flex flex-column justify-content-center align-items-center">
+        <div class="contact-btn">
+            <a href="" class="btn btn-primary btn-custom-black">CONTACT</a>
+        </div>
+        <div class="socialmedia">
+            <img class="btn-socialmedia" src="images/facebook-icon.png" />
+            <img class="btn-socialmedia" src="images/medium-icon.png" />
+        </div>
+        <div class="slogan">
+            MAY THE <a href="https://atbee.me" target="__blank">ODDS</a> BE WITH YOU
+        </div>
+        <div class="tab-footer"></div>
     </footer>
-  </body>
+</body>
+
 </html>
